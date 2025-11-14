@@ -1,0 +1,666 @@
+<!DOCTYPE html>
+<html lang="ru">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Бизнес-Партнер — Профессиональные кассовые решения</title>
+        <link
+            href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap"
+            rel="stylesheet"
+        />
+        <link rel="stylesheet" href="style.css" />
+        <link rel="icon" href="images/favicon.png" />
+    </head>
+    <body>
+        <div class="home" id="top">
+            <header>
+                <div class="container">
+                    <a
+                        href="#"
+                        class="logo"
+                        onclick="window.location.reload();"
+                    >
+                        <img
+                            src="images/logo.png"
+                            alt="Логотип"
+                            class="logo-icon"
+                        />
+                        <span class="logo__text">Бизнес-Партнер</span>
+                    </a>
+                    <nav class="nav">
+                        <ul class="nav__list">
+                            <li class="nav__item">
+                                <a href="#advantages" class="nav__link"
+                                    >Преимущества</a
+                                >
+                            </li>
+                            <li class="nav__item">
+                                <a href="#catalog" class="nav__link">Каталог</a>
+                            </li>
+                            <li class="nav__item">
+                                <a href="#discount" class="nav__link">Скидка</a>
+                            </li>
+                            <li class="nav__item">
+                                <a href="#consult" class="nav__link"
+                                    >Консультация</a
+                                >
+                            </li>
+                        </ul>
+                    </nav>
+                    <div class="contact-info">
+                        <p class="contact-info__item">
+                            г. Вологда, ул. Гончарная, д. 10
+                        </p>
+                        <p class="contact-info__item">+7 (921) 230-54-29</p>
+                    </div>
+                </div>
+            </header>
+
+            <section class="hero">
+                <div class="container">
+                    <div class="hero__content">
+                        <h1 class="hero__title">
+                            Кассовые решения для вашего бизнеса
+                        </h1>
+                        <a href="#catalog">
+                            <button class="hero__btn btn golden">
+                                Узнать больше о товарах
+                            </button>
+                        </a>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <section class="advantages" id="advantages">
+            <div class="container">
+                <div class="advantages__grid">
+                    <div class="adv-item">
+                        <div class="adv-item__icon">
+                            <img src="images/check-mark.png" alt="Галочка" />
+                        </div>
+                        <h3 class="adv-item__title">Гарантия и обслуживание</h3>
+                        <p class="adv-item__text">
+                            Полное техническое сопровождение и гарантия на всё
+                            оборудование
+                        </p>
+                    </div>
+                    <div class="adv-item">
+                        <div class="adv-item__icon">
+                            <img src="images/user.png" alt="Пользователь" />
+                        </div>
+                        <h3 class="adv-item__title">Простота использования</h3>
+                        <p class="adv-item__text">
+                            Интуитивно понятные интерфейсы и быстрая настройка
+                        </p>
+                    </div>
+                    <div class="adv-item">
+                        <div class="adv-item__icon">
+                            <img src="images/law.png" alt="законодательство" />
+                        </div>
+                        <h3 class="adv-item__title">
+                            Соответствие законодательству
+                        </h3>
+                        <p class="adv-item__text">
+                            Все устройства соответствуют 54-ФЗ и требованиям
+                            ЕГАИС
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="catalog" id="catalog">
+            <div class="container">
+                <h2 class="catalog__title">Каталог товаров и услуг</h2>
+
+                <div class="filters">
+                    <button
+                        class="filter-btn filter-btn--active"
+                        data-filter="all"
+                    >
+                        Все
+                    </button>
+                    <button class="filter-btn" data-filter="autonomous">
+                        Автономные
+                    </button>
+                    <button class="filter-btn" data-filter="smart">
+                        Смарт-терминалы
+                    </button>
+                    <button class="filter-btn" data-filter="registrar">
+                        Фискальные регистраторы
+                    </button>
+                    <button class="filter-btn" data-filter="fn">
+                        Фискальные накопители
+                    </button>
+                    <button class="filter-btn" data-filter="other">
+                        Другое
+                    </button>
+                </div>
+
+                <div class="products-grid" id="products-grid">
+                    <div class="product-card" data-category="autonomous">
+                        <div class="product-card__img">
+                            <img
+                                src="images/Mercury-180F.png"
+                                alt="Меркурий-180Ф"
+                            />
+                        </div>
+                        <div class="product-card__info">
+                            <h3 class="product-card__title">Меркурий-180Ф</h3>
+                            <div class="product-card__price">от 8 650 ₽</div>
+                            <a href="#consult"
+                                ><button class="product-card__btn">
+                                    Подробнее
+                                </button>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="product-card" data-category="autonomous">
+                        <div class="product-card__img">
+                            <img
+                                src="images/Mercury-115F.png"
+                                alt="Меркурий-115Ф"
+                            />
+                        </div>
+                        <div class="product-card__info">
+                            <h3 class="product-card__title">Меркурий-115Ф</h3>
+                            <div class="product-card__price">от 9 080 ₽</div>
+                            <a href="#consult"
+                                ><button class="product-card__btn">
+                                    Подробнее
+                                </button></a
+                            >
+                        </div>
+                    </div>
+                    <div class="product-card" data-category="autonomous">
+                        <div class="product-card__img">
+                            <img
+                                src="images/Mercury-130F.png"
+                                alt="Меркурий-130Ф"
+                            />
+                        </div>
+                        <div class="product-card__info">
+                            <h3 class="product-card__title">Меркурий-130Ф</h3>
+                            <div class="product-card__price">от 9 970 ₽</div>
+                            <a href="#consult"
+                                ><button class="product-card__btn">
+                                    Подробнее
+                                </button></a
+                            >
+                        </div>
+                    </div>
+                    <div class="product-card" data-category="autonomous">
+                        <div class="product-card__img">
+                            <img
+                                src="images/Mercury-185F.png"
+                                alt="Меркурий-185Ф"
+                            />
+                        </div>
+                        <div class="product-card__info">
+                            <h3 class="product-card__title">Меркурий-185Ф</h3>
+                            <div class="product-card__price">от 9 370 ₽</div>
+                            <a href="#consult"
+                                ><button class="product-card__btn">
+                                    Подробнее
+                                </button></a
+                            >
+                        </div>
+                    </div>
+
+                    <div class="product-card" data-category="smart">
+                        <div class="product-card__img">
+                            <img src="images/Evotor 6.png" alt="Эвотор 6" />
+                        </div>
+                        <div class="product-card__info">
+                            <h3 class="product-card__title">Эвотор 6</h3>
+                            <div class="product-card__price">от 29 900 ₽</div>
+                            <a href="#consult"
+                                ><button class="product-card__btn">
+                                    Подробнее
+                                </button></a
+                            >
+                        </div>
+                    </div>
+                    <div class="product-card" data-category="smart">
+                        <div class="product-card__img">
+                            <img src="images/Evotor 5.png" alt="Эвотор 5" />
+                        </div>
+                        <div class="product-card__info">
+                            <h3 class="product-card__title">Эвотор 5</h3>
+                            <div class="product-card__price">от 24 900 ₽</div>
+                            <a href="#consult"
+                                ><button class="product-card__btn">
+                                    Подробнее
+                                </button></a
+                            >
+                        </div>
+                    </div>
+                    <div class="product-card" data-category="smart">
+                        <div class="product-card__img">
+                            <img src="images/Evotor 7.3.png" alt="Эвотор 7.3" />
+                        </div>
+                        <div class="product-card__info">
+                            <h3 class="product-card__title">Эвотор 7.3</h3>
+                            <div class="product-card__price">от 34 900 ₽</div>
+                            <a href="#consult"
+                                ><button class="product-card__btn">
+                                    Подробнее
+                                </button></a
+                            >
+                        </div>
+                    </div>
+                    <div class="product-card" data-category="smart">
+                        <div class="product-card__img">
+                            <img src="images/Evotor 10.png" alt="Эвотор 10" />
+                        </div>
+                        <div class="product-card__info">
+                            <h3 class="product-card__title">Эвотор 10</h3>
+                            <div class="product-card__price">от 38 900 ₽</div>
+                            <a href="#consult"
+                                ><button class="product-card__btn">
+                                    Подробнее
+                                </button></a
+                            >
+                        </div>
+                    </div>
+                    <div class="product-card" data-category="smart">
+                        <div class="product-card__img">
+                            <img src="images/Sigma 7.png" alt="Sigma 7" />
+                        </div>
+                        <div class="product-card__info">
+                            <h3 class="product-card__title">Sigma 7</h3>
+                            <div class="product-card__price">от 22 150 ₽</div>
+                            <a href="#consult"
+                                ><button class="product-card__btn">
+                                    Подробнее
+                                </button></a
+                            >
+                        </div>
+                    </div>
+                    <div class="product-card" data-category="smart">
+                        <div class="product-card__img">
+                            <img src="images/Sigma 10.png" alt="Sigma 10" />
+                        </div>
+                        <div class="product-card__info">
+                            <h3 class="product-card__title">Sigma 10</h3>
+                            <div class="product-card__price">от 35 500 ₽</div>
+                            <a href="#consult"
+                                ><button class="product-card__btn">
+                                    Подробнее
+                                </button></a
+                            >
+                        </div>
+                    </div>
+                    <div class="product-card" data-category="smart">
+                        <div class="product-card__img">
+                            <img
+                                src="images/Cassatka 1F.png"
+                                alt="Кассатка 1Ф"
+                            />
+                        </div>
+                        <div class="product-card__info">
+                            <h3 class="product-card__title">Кассатка 1Ф</h3>
+                            <div class="product-card__price">от 20 000 ₽</div>
+                            <a href="#consult"
+                                ><button class="product-card__btn">
+                                    Подробнее
+                                </button></a
+                            >
+                        </div>
+                    </div>
+
+                    <div class="product-card" data-category="registrar">
+                        <div class="product-card__img">
+                            <img src="images/Atol-1F.png" alt="Атол-1Ф" />
+                        </div>
+                        <div class="product-card__info">
+                            <h3 class="product-card__title">Атол-1Ф</h3>
+                            <div class="product-card__price">от 17 500 ₽</div>
+                            <a href="#consult"
+                                ><button class="product-card__btn">
+                                    Подробнее
+                                </button></a
+                            >
+                        </div>
+                    </div>
+                    <div class="product-card" data-category="registrar">
+                        <div class="product-card__img">
+                            <img src="images/Atol-30F.png" alt="Атол-30Ф" />
+                        </div>
+                        <div class="product-card__info">
+                            <h3 class="product-card__title">Атол-30Ф</h3>
+                            <div class="product-card__price">от 26 000 ₽</div>
+                            <a href="#consult"
+                                ><button class="product-card__btn">
+                                    Подробнее
+                                </button></a
+                            >
+                        </div>
+                    </div>
+                    <div class="product-card" data-category="registrar">
+                        <div class="product-card__img">
+                            <img src="images/Atol-11F.png" alt="Атол-11Ф" />
+                        </div>
+                        <div class="product-card__info">
+                            <h3 class="product-card__title">Атол-11Ф</h3>
+                            <div class="product-card__price">от 29 000 ₽</div>
+                            <a href="#consult"
+                                ><button class="product-card__btn">
+                                    Подробнее
+                                </button></a
+                            >
+                        </div>
+                    </div>
+                    <div class="product-card" data-category="registrar">
+                        <div class="product-card__img">
+                            <img src="images/Atol-55F.png" alt="Атол-55Ф" />
+                        </div>
+                        <div class="product-card__info">
+                            <h3 class="product-card__title">Атол-55Ф</h3>
+                            <div class="product-card__price">от 42 000 ₽</div>
+                            <a href="#consult"
+                                ><button class="product-card__btn">
+                                    Подробнее
+                                </button></a
+                            >
+                        </div>
+                    </div>
+                    <div class="product-card" data-category="registrar">
+                        <div class="product-card__img">
+                            <img
+                                src="images/POScenter-02Ф.png"
+                                alt="POScenter-02Ф"
+                            />
+                        </div>
+                        <div class="product-card__info">
+                            <h3 class="product-card__title">POScenter-02Ф</h3>
+                            <a href="#consult" class="btn product-card__price"
+                                >Узнать о наличии</a
+                            >
+                        </div>
+                    </div>
+
+                    <div class="product-card" data-category="fn">
+                        <div class="product-card__img">
+                            <img
+                                src="images/FN for 15 months.png"
+                                alt="ФН на 15 месяцев"
+                            />
+                        </div>
+                        <div class="product-card__info">
+                            <h3 class="product-card__title">ФН на 15 мес.</h3>
+                            <div class="product-card__price">от 15 200 ₽</div>
+                            <a href="#consult"
+                                ><button class="product-card__btn">
+                                    Подробнее
+                                </button></a
+                            >
+                        </div>
+                    </div>
+                    <div class="product-card" data-category="fn">
+                        <div class="product-card__img">
+                            <img
+                                src="images/FN for 36 months.png"
+                                alt="ФН на 36 месяцев"
+                            />
+                        </div>
+                        <div class="product-card__info">
+                            <h3 class="product-card__title">ФН на 36 мес.</h3>
+                            <div class="product-card__price">от 21 000 ₽</div>
+                            <a href="#consult"
+                                ><button class="product-card__btn">
+                                    Подробнее
+                                </button></a
+                            >
+                        </div>
+                    </div>
+
+                    <div class="product-card" data-category="other">
+                        <div class="product-card__img">
+                            <img
+                                src="images/fns.png"
+                                alt="Регистрация в ИФНС"
+                            />
+                        </div>
+                        <div class="product-card__info">
+                            <h3 class="product-card__title">
+                                Регистрация в ИФНС
+                            </h3>
+                            <div class="product-card__price">от 500 ₽</div>
+                            <a href="#consult"
+                                ><button class="product-card__btn">
+                                    Подробнее
+                                </button></a
+                            >
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="discount" id="discount">
+            <div class="container">
+                <div class="discount__inner">
+                    <div class="discount__icon">
+                        <img src="images/sale.png" alt="Скидка" />
+                    </div>
+                    <div class="discount__text">
+                        <h2 class="discount__title">Специальное предложение</h2>
+                        <p class="discount__description">
+                            Скидка при заключении договора на техническое
+                            обслуживание.<br />
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="consult" id="consult">
+            <div class="container">
+                <div>
+                    <img
+                        src="images/gold phone.png"
+                        alt="Телефон"
+                        class="consult__phone-img no-drag-img"
+                    />
+                    <div class="consult__content">
+                        <h2 class="consult__title">
+                            Получите бесплатную консультацию
+                        </h2>
+                        <div class="consult__description">
+                            <div class="consult__list">
+                                <div class="consult__list-item">
+                                    <img
+                                        src="images/location.png"
+                                        alt="Местоположение"
+                                        class="consult__item-img"
+                                    />
+                                    <p class="consult__item-text">
+                                        г. Вологда, ул. Гончарная, д. 10
+                                    </p>
+                                </div>
+                                <div class="consult__list-item">
+                                    <img
+                                        src="images/mail.png"
+                                        alt="Эл. почта"
+                                        class="consult__item-img"
+                                    />
+                                    <p class="consult__item-text">
+                                        bp35@mail.ru
+                                    </p>
+                                </div>
+                                <div class="consult__list-item">
+                                    <img
+                                        src="images/phone.png"
+                                        alt="Местоположение"
+                                        class="consult__item-img"
+                                    />
+                                    <p class="consult__item-text">
+                                        +7 (921) 230-54-29
+                                    </p>
+                                </div>
+                            </div>
+                            <p class="consult__subtitle">
+                                Подберём оборудование под ваш бизнес
+                            </p>
+                            <hr class="consult__line" />
+                            <div class="consult__working-hours">
+                                Режим работы: пн-пт 08:30–17:30
+                            </div>
+                        </div>
+                        <form
+                            class="consult__form"
+                            id="consult-form"
+                            action="https://formspree.io/f/xanaqllz"
+                            method="POST"
+                        >
+                            <div class="consult__form-field">
+                                <span class="error-message"
+                                    >Введите имя (минимум 2 символа)</span
+                                >
+                                <input
+                                    type="text"
+                                    name="name"
+                                    class="consult__form-input"
+                                    placeholder="Имя"
+                                />
+                            </div>
+
+                            <div
+                                class="consult__form-field consult__toggle-field"
+                            >
+                                <label class="toggle-label"
+                                    >Где хотите получить консультацию?</label
+                                >
+                                <div class="toggle-container">
+                                    <span class="toggle-text">По телефону</span>
+                                    <label class="toggle-switch">
+                                        <input
+                                            type="checkbox"
+                                            id="contact-toggle"
+                                        />
+                                        <span class="slider"></span>
+                                    </label>
+                                    <span class="toggle-text">По email</span>
+                                </div>
+                            </div>
+                            <div class="consult__form-field" id="contact-field">
+                                <span class="error-message" id="contact-error"
+                                    >Введите корректный номер телефона</span
+                                >
+                                <input
+                                    type="tel"
+                                    name="contact"
+                                    class="consult__form-input"
+                                    placeholder="Телефон"
+                                    id="contact-input"
+                                />
+                            </div>
+                            <div class="consult__form-field">
+                                <textarea
+                                    name="message"
+                                    class="consult__form-textarea"
+                                    placeholder="Ваш вопрос (необязательно)"
+                                    rows="4"
+                                ></textarea>
+                            </div>
+                            <div
+                                class="consult__form-field consult__agreement-field"
+                            >
+                                <label class="consult__agreement">
+                                    <input type="checkbox" name="agreement" />
+                                    <div class="checkbox-custom"></div>
+                                    <span class="consult__agreement-text">
+                                        Я согласен(а) на
+                                        <a
+                                            href="#"
+                                            target="_blank"
+                                            rel="noopener"
+                                            onclick="alert('При нажатии на данную ссылку будет выполняться переход к пользовательскому соглашению')"
+                                        >
+                                            обработку персональных данных
+                                        </a>
+                                    </span>
+                                </label>
+                                <span class="error-message"
+                                    >Необходимо согласие на обработку
+                                    данных</span
+                                >
+                            </div>
+
+                            <button type="submit" class="btn consult__form-btn">
+                                Отправить заявку
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <footer class="footer">
+            <div class="container">
+                <div class="footer__grid">
+                    <a
+                        href="#"
+                        class="logo footer__logo"
+                        onclick="window.reload();"
+                    >
+                        <img
+                            src="images/logo.png"
+                            alt="Логотип"
+                            class="logo-icon"
+                        />
+                        <span class="logo__text">Бизнес-Партнер</span>
+                    </a>
+                    <div class="footer__contacts">
+                        <p><strong>Адрес:</strong></p>
+                        <p>160004, г. Вологда,<br />ул. Гончарная, д. 10</p>
+                    </div>
+                    <div class="footer__contacts">
+                        <p><strong>Телефоны:</strong></p>
+                        <p>
+                            (8172) 52-07-32<br />(8172) 52-07-33<br />+7 (921)
+                            230-54-29
+                        </p>
+                    </div>
+                    <div class="footer__contacts">
+                        <p><strong>Email:</strong> bp35@mail.ru</p>
+                        <p>
+                            <strong>Директор:</strong> Назаров Михаил Викторович
+                        </p>
+                    </div>
+                </div>
+                <div class="footer__copyright">
+                    &copy;2025 ООО "Бизнес-Партнер". Все права защищены.
+                </div>
+            </div>
+        </footer>
+        <div id="modal" class="modal">
+            <div class="modal__content">
+                <button class="modal__close" id="modal-close">
+                    <svg
+                        width="24"
+                        height="24"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                        alt="Закрыть окно"
+                    >
+                        <path
+                            d="M18 6L6 18M6 6L18 18"
+                            stroke="currentColor"
+                            stroke-width="2"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                        />
+                    </svg>
+                </button>
+                <div class="modal__icon" id="modal-icon"></div>
+                <p class="modal__text" id="modal-text"></p>
+            </div>
+        </div>
+
+        <script src="script.js"></script>
+    </body>
+</html>
