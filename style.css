@@ -18,7 +18,7 @@
 body {
     font-family: "Roboto", sans-serif;
     background: var(--white);
-    font-size: 16px;
+    font-size: 15px;
     color: var(--dark);
 }
 
@@ -44,7 +44,7 @@ html {
     padding: 15px 30px;
     border: none;
     border-radius: 4px;
-    font-size: 16px;
+    font-size: 15px;
     font-weight: 600;
     text-align: center;
     color: var(--dark);
@@ -187,11 +187,13 @@ header .container {
     align-items: center;
     justify-content: center;
 }
+.adv-item__icon-img {
+    width: 46px;
+}
 .adv-item__title {
     font-size: 20px;
     color: var(--red);
 }
-
 .adv-item__text {
     margin-top: 12px;
 }
@@ -308,6 +310,9 @@ header .container {
     justify-content: center;
     align-items: center;
     flex-shrink: 0;
+}
+.discount__icon-img {
+    width: 60px;
 }
 .discount__text {
     text-align: left;
@@ -585,14 +590,28 @@ input:focus-visible + .slider {
     align-items: flex-start;
     margin-bottom: 40px;
 }
-.footer__tagline {
-    margin: 8px 0 0 30px;
-    font-size: 14px;
+.footer__title {
+    display: flex;
+    gap: 5px;
+    align-items: center;
+}
+.footer__title-img {
+    width: 20px;
+}
+.footer__title-text {
     color: var(--gold);
 }
-.footer__contacts p {
-    margin: 8px 0;
-    font-size: 14px;
+.footer__text {
+    margin-top: 8px;
+}
+.footer__list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+.footer__last-title {
+    margin-top: 16px;
 }
 .footer__copyright {
     text-align: center;
