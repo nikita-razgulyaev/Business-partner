@@ -51,6 +51,39 @@ html {
     cursor: pointer;
 }
 
+.golden-btn {
+    margin-top: 20px;
+    background: linear-gradient(135deg, #e09e60, var(--gold));
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+    transition: transform 0.2s;
+}
+.golden-btn:hover {
+    transform: translateY(-2px);
+}
+.golden-btn::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 50%;
+    height: 100%;
+    background: linear-gradient(
+        120deg,
+        transparent,
+        rgba(255, 255, 255, 0.5),
+        transparent
+    );
+    transform: skewX(-25deg);
+    pointer-events: none;
+    transition: none;
+}
+.golden-btn:hover::before {
+    left: 120%;
+    transition: left 0.9s cubic-bezier(0.3, 0.7, 0.4, 1);
+}
+
 .no-drag-img {
     pointer-events: none;
     user-select: none;
@@ -112,16 +145,12 @@ header .container {
     gap: 20px;
 }
 .contact-info__item {
-    font-size: 15px;
     font-weight: 500;
 }
 
 .hero {
-    height: 500px;
+    padding: 160px 0 280px 0;
     color: var(--white);
-}
-.hero__content {
-    margin-top: 150px;
 }
 .hero__title {
     width: 500px;
@@ -131,11 +160,6 @@ header .container {
 
 .hero__btn {
     margin-top: 20px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
-    background: linear-gradient(135deg, #e09e60, var(--gold));
-    position: relative;
-    overflow: hidden;
-    z-index: 1;
 }
 
 .hero__btn::before {
@@ -196,6 +220,99 @@ header .container {
 }
 .adv-item__text {
     margin-top: 12px;
+}
+
+.selection {
+    padding: 90px 0;
+    background: #ffffff;
+}
+.selection__title {
+    font-size: 40px;
+    text-align: center;
+    color: var(--red);
+    margin-bottom: 16px;
+}
+.selection__subtitle {
+    font-size: 18px;
+    text-align: center;
+    color: #555;
+    margin-bottom: 40px;
+}
+.selection__grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 30px;
+    margin-bottom: 40px;
+}
+.selection__item {
+    background: var(--gray-light);
+    padding: 30px 20px;
+    border-radius: 12px;
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+.selection__item:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.1);
+}
+.selection__item--highlight {
+    background: linear-gradient(135deg, #fdf4e9, #fef8f0);
+    border: 2px solid var(--gold);
+    position: relative;
+    overflow: hidden;
+}
+.selection__item--highlight::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 5px;
+    background: var(--gold);
+}
+.selection__icon {
+    width: 90px;
+    height: 90px;
+    margin: 0 auto 20px;
+    background: var(--red);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.selection__icon-img--1,
+.selection__icon-img--3,
+.selection__icon-img--4 {
+    width: 54px;
+}
+.selection__icon-img--2 {
+    width: 46px;
+}
+.selection__item-title {
+    font-size: 20px;
+    color: var(--red);
+    margin-bottom: 12px;
+}
+.selection__item-text {
+    font-size: 15px;
+    line-height: 1.5;
+    color: #444;
+}
+.selection__bottom {
+    text-align: center;
+}
+.selection__bottom-text {
+    font-size: 18px;
+    color: #333;
+}
+.selection__btn {
+    margin-top: 20px;
+    background: var(--red);
+    color: var(--white);
+    transition: 0.3s;
+}
+.selection__btn:hover {
+    background: var(--dark-red);
 }
 
 .catalog {
@@ -553,8 +670,8 @@ header .container {
     left: 0;
     right: 0;
     bottom: 0;
-    background-color: var(--white); /* Фон всегда серый */
-    transition: none; /* Убираем анимацию фона */
+    background-color: var(--white);
+    transition: none;
     border: var(--red) 1px solid;
     border-radius: 34px;
 }
@@ -565,14 +682,14 @@ header .container {
     width: 18px;
     left: 3px;
     bottom: 2.4px;
-    background-color: var(--red); /* Всегда красный */
+    background-color: var(--red);
     transition: 0.3s;
     border-radius: 50%;
     box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
 }
 input:checked + .slider:before {
     transform: translateX(24px);
-    background-color: var(--red); /* Остаётся красным */
+    background-color: var(--red);
 }
 input:focus-visible + .slider {
     box-shadow: 0 0 0 3px rgba(209, 41, 47, 0.2);
