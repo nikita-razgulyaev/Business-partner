@@ -73,17 +73,19 @@ form.addEventListener("submit", async function (e) {
         hasError = true;
     }
 
-    // Проверка контакта
+    // Проверка контакта (телефон или email)
     if (contactToggle.checked) {
+        // Email
         const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
         if (!emailRegex.test(contactValue)) {
             contactField.classList.add("invalid");
             hasError = true;
         }
     } else {
-        const phoneRegex =
-            /^(\+7|8)?[\s\-]?\(?[0-9]{3}\)?[\s\-]?[0-9]{3}[\s\-]?[0-9]{2}[\s\-]?[0-9]{2}$/;
-        if (!phoneRegex.test(contactValue.replace(/[\s\-\(\)]/g, ""))) {
+        // Телефон — универсальная проверка для РФ
+        const digits = contactValue.replace(/\D/g, ""); // +7 999 123 45 67 → 79991234567
+
+        if (digits.length !== 11 || !["7", "8"].includes(digits[0])) {
             contactField.classList.add("invalid");
             hasError = true;
         }
@@ -103,15 +105,18 @@ form.addEventListener("submit", async function (e) {
         return;
     }
 
-    // Подготовка данных
+    // Подготовка данных для отправки
     const formData = new FormData();
     formData.append("name", name);
+
     if (contactToggle.checked) {
         formData.append("email", contactValue);
     } else {
+        // Отправляем номер как есть (с +7, пробелами и т.п. — серверу обычно так удобнее)
         formData.append("phone", contactValue);
     }
-    if (form.message.value.trim()) {
+
+    if (form.message?.value.trim()) {
         formData.append("message", form.message.value.trim());
     }
     formData.append("agreement", "Да");
@@ -151,8 +156,8 @@ form.addEventListener("submit", async function (e) {
 
 // Функция показа модалки
 function showModal(type, message) {
-    modalIcon.className = "modal__icon"; // сброс
-    modalIcon.classList.add(type);
+    modalIcon.className = "modal__icon";
+    modalIcon.classList.add(type === "success" ? "success" : "error");
 
     if (type === "success") {
         modalIcon.innerHTML = `
@@ -163,7 +168,7 @@ function showModal(type, message) {
     } else {
         modalIcon.innerHTML = `
             <svg viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg">
-                <circle cx="32" cy="32" r="30" fill="none" stroke="white sludge" stroke-width="4"/>
+                <circle cx="32" cy="32" r="30" fill="none" stroke="white" stroke-width="4"/>
                 <path d="M32 18 L32 36 M32 44 L32 46" stroke="white" stroke-width="5" stroke-linecap="round"/>
             </svg>`;
     }

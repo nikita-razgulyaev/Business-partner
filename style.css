@@ -246,10 +246,13 @@ header .container {
 }
 .selection__item {
     background: var(--gray-light);
-    padding: 30px 20px;
+    padding: 40px 40px;
     border-radius: 12px;
-    text-align: center;
     transition: transform 0.3s, box-shadow 0.3s;
+    display: grid;
+    grid-template-columns: 120px 1fr;
+    gap: 40px;
+    align-items: center;
 }
 .selection__item:hover {
     transform: translateY(-6px);
@@ -271,22 +274,16 @@ header .container {
     background: var(--gold);
 }
 .selection__icon {
-    width: 90px;
-    height: 90px;
-    margin: 0 auto 20px;
+    width: 120px;
+    height: 120px;
     background: var(--red);
     border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
 }
-.selection__icon-img--1,
-.selection__icon-img--3,
-.selection__icon-img--4 {
-    width: 54px;
-}
-.selection__icon-img--2 {
-    width: 46px;
+.selection__icon-img {
+    width: 76px;
 }
 .selection__item-title {
     font-size: 20px;
