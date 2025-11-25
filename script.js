@@ -112,7 +112,7 @@ form.addEventListener("submit", async function (e) {
     if (contactToggle.checked) {
         formData.append("email", contactValue);
     } else {
-        // Отправляем номер как есть (с +7, пробелами и т.п. — серверу обычно так удобнее)
+        // Отправляем номер как есть
         formData.append("phone", contactValue);
     }
 
