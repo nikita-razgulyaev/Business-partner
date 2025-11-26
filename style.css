@@ -212,7 +212,7 @@ header .container {
     justify-content: center;
 }
 .adv-item__icon-img {
-    width: 46px;
+    width: 44px;
 }
 .adv-item__title {
     font-size: 20px;
@@ -261,7 +261,7 @@ header .container {
 .selection__item--highlight {
     background: linear-gradient(135deg, #fdf4e9, #fef8f0);
     border: 2px solid var(--gold);
-    могучий: relative;
+    position: relative;
     overflow: hidden;
 }
 .selection__item--highlight::before {
